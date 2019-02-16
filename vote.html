@@ -10,9 +10,9 @@
 <body>
     <audio src="财富自由.mp3" autoplay="autoplay" loop="loop"></audio>
     <header class="w">    
-        <a href=""></a>
+        <a href="index.html"></a>
         <p>投票</p> 
-        <a href="" ></a>
+        <a href="index.html" ></a>
     </header>
     <section>
         <div class="head">
@@ -154,9 +154,12 @@
     <script>
         var myAudio = document.getElementById('myaudio');
         let playAudio = document.getElementsByTagName('audio')[0];
-        console.log(playAudio);
         myAudio.onclick = function () {
-            playAudio.play();
+            if (playAudio.paused) {
+                playAudio.play();
+            } else {
+                playAudio.pause();
+            }
             return false;
         }
     </script>
